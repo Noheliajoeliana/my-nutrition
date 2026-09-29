@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { calculate, parseGrams } from '../public/portions.js';
+import { calculate, parseGrams } from './portions.js';
 
 const portionsOf = (input) =>
   Object.fromEntries(calculate(input).groups.map((g) => [g.id, g.portions]));
