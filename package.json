@@ -1,0 +1,12 @@
+{
+  "name": "porciones",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Calculadora de porciones de intercambio a partir de la tabla nutricional",
+  "scripts": {
+    "start": "node serve.js",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=18" }
+}

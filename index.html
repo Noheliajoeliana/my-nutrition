@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; manifest-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Porciones">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icon-180.png">
+  <link rel="icon" href="icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Porciones</title>
+</head>
+<body>
+  <main>
+    <h1>Porciones</h1>
+    <p class="lead">Ingresa los gramos por porción que indica la tabla nutricional.</p>
+
+    <form id="form" autocomplete="off" novalidate>
+      <div class="sheet">
+        <label class="row">
+          <span>Proteínas</span>
+          <span class="input"><input type="text" name="protein" inputmode="decimal" placeholder="0" autocomplete="off"><span>g</span></span>
+        </label>
+        <label class="row">
+          <span>Carbohidratos</span>
+          <span class="input"><input type="text" name="carbs" inputmode="decimal" placeholder="0" autocomplete="off"><span>g</span></span>
+        </label>
+        <label class="row">
+          <span>Grasas</span>
+          <span class="input"><input type="text" name="fat" inputmode="decimal" placeholder="0" autocomplete="off"><span>g</span></span>
+        </label>
+        <label class="row">
+          <span>Es lácteo</span>
+          <input type="checkbox" name="dairy">
+        </label>
+      </div>
+      <div class="actions"><button type="button" id="clear">Limpiar</button></div>
+    </form>
+
+    <p id="msg" role="status"></p>
+
+    <section class="sheet result-sheet" aria-labelledby="result-title">
+      <h2 id="result-title">Equivale a</h2>
+      <ul id="results" aria-live="polite"></ul>
+    </section>
+
+    <details>
+      <summary>Ver cálculo</summary>
+      <ol id="steps"></ol>
+    </details>
+
+    <noscript><p class="error">Esta app necesita JavaScript activado.</p></noscript>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
